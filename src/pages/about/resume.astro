@@ -82,7 +82,10 @@ import { Mail, Phone, Github, Linkedin, Download } from 'lucide-astro';
         <object data="/resume.pdf" type="application/pdf" class="w-full h-full rounded-2xl">
           <div class="flex flex-col items-center justify-center text-center p-8">
             <p class="text-[var(--color-text-muted)] mb-4">It appears your web browser doesn't support inline PDFs.</p>
-            <a href="/resume.pdf" download="Fernando_Sepulveda_Resume.pdf" class="px-6 py-3 glass rounded-full text-white hover:bg-[var(--color-primary)]/20 transition-colors">
+            <a href="/resume.pdf" target="_blank" class="px-6 py-3 glass rounded-full text-white hover:bg-[var(--color-primary)]/20 transition-colors font-bold mt-4 mb-4">
+              Open Resume (PDF)
+            </a>
+            <a href="/resume.pdf" download="Fernando_Sepulveda_Resume.pdf" class="px-6 py-3 glass rounded-full text-white hover:bg-[var(--color-primary)]/20 transition-colors text-sm">
               Download the PDF instead
             </a>
           </div>
