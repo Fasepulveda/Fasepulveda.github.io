@@ -1,0 +1,118 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import ElPasoMountain from "../../assets/ElPasoMountain.jpg";
+import Headshot from "../../assets/Headshot_Sepulveda_2026.jpg";
+import { UserCircle } from "lucide-astro";
+---
+
+<Layout
+  title="About Me | Fernando Sepulveda"
+  description="Professional biography of Fernando Sepulveda."
+>
+  <div class="max-w-4xl mx-auto mt-10 animate-fade-in-up">
+    <div class="mb-12 flex items-center space-x-6">
+      <div
+        class="rounded-2xl overflow-hidden border border-white/10 glass w-24 h-24 flex-shrink-0 bg-white/5"
+      >
+        <Image
+          src={Headshot}
+          alt="Fernando Sepulveda Headshot"
+          width={192}
+          height={192}
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+          Professional <span class="text-gradient">Biography</span>
+        </h1>
+        <p class="text-xl text-[var(--color-text-muted)] mt-2">
+          Get to know the person behind the code.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="glass p-8 md:p-12 rounded-3xl relative overflow-hidden shadow-2xl border border-white/10"
+    >
+      <!-- Decorative gradient blob -->
+      <div
+        class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-[var(--color-primary)]/20 blur-3xl"
+      >
+      </div>
+
+      <div
+        class="relative z-10 prose prose-invert prose-lg max-w-none text-[var(--color-text-main)] space-y-6 leading-relaxed"
+      >
+        <p class="text-xl md:text-2xl font-medium leading-relaxed text-white">
+          Hi, I'm Fernando Sepulveda— I'm currently pursuing a Master's degree
+          in Computer Science at The University of Texas at El Paso. I'm
+          passionate about using technology to solve meaningful problems,
+          especially in areas like artificial intelligence, cybersecurity,
+          automation, and accessible design.
+        </p>
+
+        <div
+          class="my-10 rounded-3xl overflow-hidden border border-white/10 glass shadow-2xl bg-black/20 w-full aspect-[3/1]"
+        >
+          <Image
+            src={ElPasoMountain}
+            alt="El Paso Mountain"
+            width={1200}
+            class="w-full h-full object-cover object-bottom hover:scale-105 transition-transform duration-1000"
+          />
+        </div>
+
+        <div class="group hover:bg-white/5 p-6 rounded-2xl border-l-4 border-transparent hover:border-[var(--color-primary)] transition-all duration-300">
+          <span class="block mb-2 text-[var(--color-text-main)] transition-colors duration-300 group-hover:font-bold group-hover:text-white">Previously</span>
+          <p class="text-[var(--color-text-muted)] m-0">
+            I built a versatile foundation across software
+            engineering, autonomous systems, and advanced manufacturing through
+            hands-on academic research and industry internships. My early research
+            in the additive manufacturing space inspired me to found my own 3D
+            printing marketplace startup—an idea that later took first place in a
+            university pitch competition. Alongside my entrepreneurial ventures, I
+            developed automated enterprise cloud tools, contributed to smart
+            factory machine learning initiatives, and published research on
+            cyber-secure adaptive cruise control for autonomous vehicles.
+          </p>
+        </div>
+
+        <div class="group hover:bg-white/5 p-6 rounded-2xl border-l-4 border-transparent hover:border-[var(--color-primary)] transition-all duration-300">
+          <span class="block mb-2 text-[var(--color-text-main)] transition-colors duration-300 group-hover:font-bold group-hover:text-white">Currently</span>
+          <p class="text-[var(--color-text-muted)] m-0">
+            I am pursuing a Master of Science in Computer Science
+            with a specialized focus on artificial intelligence, deep learning,
+            and computer vision. My day-to-day work sits at the intersection of
+            advanced research and practical application: I design computer vision
+            architectures and autonomous navigation systems as an AI research
+            intern, while also serving as a Graduate Research Fellow where I
+            mentor student entrepreneurs to turn AI-driven academic concepts into
+            scalable, market-ready startups.
+          </p>
+        </div>
+
+        <div class="group hover:bg-white/5 p-6 rounded-2xl border-l-4 border-transparent hover:border-[var(--color-primary)] transition-all duration-300">
+          <span class="block mb-2 text-[var(--color-text-main)] transition-colors duration-300 group-hover:font-bold group-hover:text-white">In the future</span>
+          <p class="text-[var(--color-text-muted)] m-0">
+            As a lifelong learner who believes that consistency
+            and quality drive success, I plan to continuously expand my technical
+            mastery—including contemplating a Ph.D. down the line. I want to work
+            on cutting-edge technologies that provide tangible real-world value,
+            particularly within autonomous vehicle systems, while channeling my
+            entrepreneurial spirit into launching a business that directly
+            benefits society. Ultimately, my goal is to lift as I climb by giving
+            back to the community, establishing scholarships, and creating
+            meaningful learning opportunities for young aspiring students.
+          </p>
+        </div>
+
+        <p class="text-xl font-medium text-gradient inline-block">
+          Thanks for stopping by my portfolio—feel free to explore my work or
+          reach out!
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>

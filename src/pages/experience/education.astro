@@ -1,0 +1,336 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import UTEPHome from "../../assets/UTEPHOME.jpg";
+import UTEPLogo from "../../assets/UTEP_logo.png";
+import { GraduationCap, Code2, Globe2, Rocket } from "lucide-astro";
+---
+
+<Layout
+  title="Education | Fernando Sepulveda"
+  description="Academic background and skills."
+>
+  <div class="max-w-4xl mx-auto mt-10 animate-fade-in-up">
+    <div class="mb-12 flex items-center space-x-4">
+      <div class="p-4 rounded-2xl glass bg-[var(--color-primary)]/10">
+        <GraduationCap class="w-12 h-12 text-[var(--color-primary)]" />
+      </div>
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+          Academic <span class="text-gradient">Journey</span>
+        </h1>
+        <p class="text-xl text-[var(--color-text-muted)] mt-2">
+          My education, skills, and future goals.
+        </p>
+      </div>
+    </div>
+
+    <div class="space-y-8">
+      <!-- Degree -->
+      <div class="glass p-8 rounded-3xl relative overflow-hidden group">
+        <div
+          class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity"
+        >
+          <GraduationCap class="w-32 h-32 text-white" />
+        </div>
+        <div class="mb-6 flex items-center space-x-6">
+          <div
+            class="rounded-2xl overflow-hidden w-24 h-24 flex-shrink-0 bg-transparent flex items-center justify-center shadow-lg relative z-10"
+          >
+            <Image
+              src={UTEPLogo}
+              alt="UTEP Logo"
+              width={150}
+              class="w-full h-full object-cover scale-[1]"
+            />
+          </div>
+          <div class="relative z-10">
+            <h2 class="text-3xl font-bold text-white mb-2">
+              The University of Texas at El Paso
+            </h2>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row md:items-center gap-8 relative z-10"
+        >
+          <div class="md:w-1/2">
+            <div class="mb-4">
+              <h3 class="text-xl text-[var(--color-primary)] font-semibold">
+                Master of Science in Computer Science
+              </h3>
+              <p class="text-sm text-white font-bold italic">
+                Expected: 05/2027 | GPA: 3.5
+              </p>
+              <ul class="space-y-3 text-[var(--color-text-muted)] mt-2">
+                <li class="flex items-start">
+                  <span class="mr-3 text-[var(--color-secondary)]">▹</span>
+                  <span
+                    >Specializing in Applied Artificial Intelligence, Computer
+                    Vision, and Autonomous Robotics.</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="mb-4">
+              <h3 class="text-xl text-[var(--color-primary)] font-semibold">
+                Bachelor of Science in Computer Science
+              </h3>
+              <p class="text-sm text-white font-bold italic">
+                Graduated: 12/2024 | GPA: 3.03
+              </p>
+            </div>
+
+            <ul class="space-y-3 text-[var(--color-text-muted)] mt-6">
+              <li class="flex items-start">
+                <span class="mr-3 text-[var(--color-secondary)]">▹</span>
+                <span
+                  >Completed degree at UTEP with focus in AI, cybersecurity, and
+                  data science</span
+                >
+              </li>
+
+              <li class="flex items-start">
+                <span class="mr-3 text-[var(--color-secondary)]">▹</span>
+                <div class="flex flex-col">
+                  <span class="block mb-1">Honors & Achievements:</span>
+                  <span
+                    >UNCF Oracle Scholar (2023), HITEC Scholar (2022-2024),
+                    MSIPP Scholar (2022), Dean's List (2023 & 2025)</span
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="md:w-1/2 rounded-2xl overflow-hidden border border-white/10 glass bg-black/20 flex items-center justify-center p-2"
+          >
+            <Image
+              src={UTEPHome}
+              alt="UTEP Campus"
+              width={800}
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 rounded-xl"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills & Technologies -->
+      <div class="glass p-8 md:p-10 rounded-3xl stagger-1">
+        <div class="flex items-center space-x-3 mb-8">
+          <Code2 class="w-8 h-8 text-[var(--color-secondary)]" />
+          <h2 class="text-3xl font-bold text-white">Skills & Technologies</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Programming Languages -->
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+            <h3 class="text-lg font-semibold text-[var(--color-primary)] mb-4">
+              Programming Languages
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              {
+                [
+                  "Python",
+                  "Java",
+                  "C++",
+                  "C",
+                  "SQL",
+                  "JavaScript",
+                  "TypeScript",
+                  "PHP",
+                  "Dart",
+                  "Bash",
+                  "ROS2",
+                ].map((skill) => (
+                  <span class="px-3 py-1 rounded-full text-sm bg-white/10 text-white border border-white/5">
+                    {skill}
+                  </span>
+                ))
+              }
+            </div>
+          </div>
+
+          <!-- Machine Learning & AI -->
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+            <h3 class="text-lg font-semibold text-[var(--color-accent)] mb-4">
+              Machine Learning & AI
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              {
+                [
+                  "PyTorch",
+                  "TensorFlow",
+                  "CNNs",
+                  "Transformer LLMs",
+                  "Scikit-learn",
+                  "Pandas",
+                  "NumPy",
+                  "SBERT",
+                  "OpenCV",
+                ].map((skill) => (
+                  <span class="px-3 py-1 rounded-full text-sm bg-[var(--color-accent)]/20 text-[var(--color-accent)] border border-[var(--color-accent)]/30">
+                    {skill}
+                  </span>
+                ))
+              }
+            </div>
+          </div>
+
+          <!-- Cloud, DevOps & Databases -->
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+            <h3
+              class="text-lg font-semibold text-[var(--color-secondary)] mb-4"
+            >
+              Cloud, DevOps & Databases
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              {
+                [
+                  "AWS",
+                  "Oracle Cloud (OCI)",
+                  "Docker",
+                  "Kubernetes",
+                  "Linux",
+                  "Git",
+                  "MySQL",
+                  "PostgreSQL",
+                  "MongoDB",
+                  "Neo4j",
+                ].map((skill) => (
+                  <span class="px-3 py-1 rounded-full text-sm bg-[var(--color-secondary)]/20 text-[var(--color-secondary)] border border-[var(--color-secondary)]/30">
+                    {skill}
+                  </span>
+                ))
+              }
+            </div>
+          </div>
+
+          <!-- Engineering & Simulation Tools -->
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+            <h3 class="text-lg font-semibold text-[var(--color-primary)] mb-4">
+              Engineering & Simulation Tools
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              {
+                [
+                  "Fusion 360",
+                  "SOLIDWORKS",
+                  "AutoCAD",
+                  "MATLAB",
+                  "CURA",
+                  "LabVIEW",
+                  "laserDESK",
+                ].map((skill) => (
+                  <span class="px-3 py-1 rounded-full text-sm bg-[var(--color-primary)]/20 text-[var(--color-primary)] border border-[var(--color-primary)]/30">
+                    {skill}
+                  </span>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Languages & Goals Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-2">
+        <!-- Spoken Languages -->
+        <div class="glass p-8 rounded-3xl">
+          <div class="flex items-center space-x-3 mb-6">
+            <Globe2 class="w-6 h-6 text-[var(--color-accent)]" />
+            <h3 class="text-xl font-bold text-white">Languages</h3>
+          </div>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <img
+                src="https://flagcdn.com/w40/us.png"
+                alt="US Flag"
+                class="w-8 h-auto mr-4 mt-1 rounded-sm shadow-sm"
+              />
+              <div>
+                <strong class="text-white block text-lg">English (C2)</strong>
+                <span class="text-sm text-[var(--color-text-muted)]"
+                  >Native or bilingual proficiency</span
+                >
+              </div>
+            </li>
+            <li class="flex items-start">
+              <img
+                src="https://flagcdn.com/w40/mx.png"
+                alt="Mexico Flag"
+                class="w-8 h-auto mr-4 mt-1 rounded-sm shadow-sm"
+              />
+              <div>
+                <strong class="text-white block text-lg">Spanish (C2)</strong>
+                <span class="text-sm text-[var(--color-text-muted)]"
+                  >Native or bilingual proficiency</span
+                >
+              </div>
+            </li>
+            <li class="flex items-start">
+              <img
+                src="https://flagcdn.com/w40/fr.png"
+                alt="France Flag"
+                class="w-8 h-auto mr-4 mt-1 rounded-sm shadow-sm"
+              />
+              <div>
+                <strong class="text-white block text-lg">French (C1)</strong>
+                <span class="text-sm text-[var(--color-text-muted)]"
+                  >Advanced</span
+                >
+              </div>
+            </li>
+            <li class="flex items-start">
+              <img
+                src="https://flagcdn.com/w40/br.png"
+                alt="Brazil Flag"
+                class="w-8 h-auto mr-4 mt-1 rounded-sm shadow-sm"
+              />
+              <div>
+                <strong class="text-white block text-lg">Portuguese (A2)</strong
+                >
+                <span class="text-sm text-[var(--color-text-muted)]"
+                  >Currently learning & expanding vocabulary</span
+                >
+              </div>
+            </li>
+            <li class="flex items-start">
+              <img
+                src="https://flagcdn.com/w40/cn.png"
+                alt="China Flag"
+                class="w-8 h-auto mr-4 mt-1 rounded-sm shadow-sm"
+              />
+              <div>
+                <strong class="text-white block text-lg"
+                  >Mandarin Chinese</strong
+                >
+                <span class="text-sm text-[var(--color-text-muted)]"
+                  >Hope to learn in the future</span
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Future Goals -->
+        <div
+          class="glass p-8 rounded-3xl bg-gradient-to-br from-white/5 to-[var(--color-primary)]/10 border-[var(--color-primary)]/20"
+        >
+          <div class="flex items-center space-x-3 mb-6">
+            <Rocket class="w-6 h-6 text-[var(--color-primary)]" />
+            <h3 class="text-xl font-bold text-white">Looking to the Future</h3>
+          </div>
+          <p class="text-[var(--color-text-muted)] text-lg leading-relaxed">
+            As I finish my AI Master's, I'm turning computer vision and robotics
+            research into real-world, human-centered innovation. Long-term, I
+            want to keep tackling big societal challenges, potentially pursue a
+            Ph.D., and give back by funding scholarships and mentoring the next
+            generation of tech leaders.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

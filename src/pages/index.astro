@@ -1,11 +1,52 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import HeroAnimation from '../components/HeroAnimation.astro';
+import { FileText, User, GraduationCap, Briefcase, Microscope, Gamepad2, ArrowRight } from 'lucide-astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const links = [
+  { title: 'Resume', href: '/about/resume', icon: FileText, desc: 'View my contact info and resume.', delay: 1 },
+  { title: 'Biography', href: '/about/biography', icon: User, desc: 'Read my professional biography.', delay: 2 },
+  { title: 'Education', href: '/experience/education', icon: GraduationCap, desc: 'My academic journey at UTEP.', delay: 3 },
+  { title: 'Professional Experience', href: '/experience/professional-experience', icon: Briefcase, desc: 'Professional experience and leadership.', delay: 4 },
+  { title: 'Research', href: '/experience/research', icon: Microscope, desc: 'AI and Additive Manufacturing research.', delay: 5 },
+  { title: 'Projects & Hobbies', href: '/about/projects-and-hobbies', icon: Gamepad2, desc: 'Explore my software projects and personal hobbies.', delay: 5 },
+];
 ---
 
 <Layout>
-	<Welcome />
+  <HeroAnimation />
+  <!-- Hero Section -->
+  <section class="py-20 flex flex-col items-center justify-center text-center animate-fade-in-up">
+    <div class="inline-block mb-4 px-4 py-1 rounded-full glass text-sm font-medium text-[var(--color-primary)]">
+      Welcome to my space
+    </div>
+    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+      <span class="block">Fernando</span>
+      <span class="text-gradient">Sepulveda</span>
+    </h1>
+    <p class="text-xl md:text-2xl text-[var(--color-text-muted)] max-w-2xl mx-auto mb-10">
+      Digital Portfolio showcasing my journey in Computer Science, Research, and Engineering.
+    </p>
+    
+    <a href="#explore" class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-full text-white bg-gradient-to-r from-[var(--color-secondary)] to-[var(--color-primary)] hover:opacity-90 transition-opacity shadow-lg shadow-[var(--color-primary)]/30 hover:scale-105 transform duration-300">
+      Get to know me
+      <ArrowRight class="ml-2 w-5 h-5 animate-bounce" />
+    </a>
+  </section>
+
+  <!-- Quick Links Grid -->
+  <section id="explore" class="py-16 scroll-mt-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {links.map((link) => {
+        const Icon = link.icon;
+        return (
+          <Card title={link.title} href={link.href} delay={link.delay}>
+            <Icon slot="icon" class="w-8 h-8 mb-4 text-[var(--color-secondary)] group-hover:text-[var(--color-primary)] transition-colors" />
+            <p>{link.desc}</p>
+          </Card>
+        );
+      })}
+    </div>
+  </section>
 </Layout>

@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+import { Mail, Phone, Github, Linkedin, Download } from 'lucide-astro';
+---
+
+<Layout title="Resume | Fernando Sepulveda" description="Contact info and professional details for Fernando Sepulveda.">
+  <div class="max-w-4xl mx-auto mt-10 animate-fade-in-up">
+    <div class="mb-12">
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Professional <span class="text-gradient">Details</span></h1>
+      <p class="text-xl text-[var(--color-text-muted)]">My contact information and online presence.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Contact Info -->
+      <div class="space-y-6">
+        <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
+        
+        <div class="glass p-6 rounded-2xl space-y-4">
+          <div class="flex items-center space-x-4">
+            <div class="p-3 rounded-full bg-[var(--color-secondary)]/10 text-[var(--color-secondary)]">
+              <Mail class="w-6 h-6" />
+            </div>
+            <div>
+              <p class="text-sm text-[var(--color-text-muted)]">Email</p>
+              <a href="mailto:fasepulveda@miners.utep.edu" class="text-lg font-medium hover:text-[var(--color-primary)] transition-colors">
+                fasepulveda@miners.utep.edu
+              </a>
+            </div>
+          </div>
+
+          <div class="flex items-center space-x-4">
+            <div class="p-3 rounded-full bg-[var(--color-secondary)]/10 text-[var(--color-secondary)]">
+              <Phone class="w-6 h-6" />
+            </div>
+            <div>
+              <p class="text-sm text-[var(--color-text-muted)]">Phone</p>
+              <a href="tel:9153526547" class="text-lg font-medium hover:text-[var(--color-primary)] transition-colors">
+                (915) 352-6547
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Links & Resume -->
+      <div class="space-y-6 stagger-1">
+        <h2 class="text-2xl font-bold mb-4">Connect & Download</h2>
+        
+        <div class="grid grid-cols-1 gap-4">
+          <a href="https://github.com/Fasepulveda" target="_blank" rel="noopener noreferrer" class="glass p-4 rounded-xl flex items-center justify-between hover:border-[var(--color-primary)] transition-colors group">
+            <div class="flex items-center space-x-3">
+              <Github class="w-6 h-6 text-[var(--color-text-muted)] group-hover:text-white transition-colors" />
+              <span class="font-medium">GitHub Profile</span>
+            </div>
+            <span class="text-[var(--color-primary)] group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+
+          <a href="http://www.linkedin.com/in/fernando-sepulveda-utep" target="_blank" rel="noopener noreferrer" class="glass p-4 rounded-xl flex items-center justify-between hover:border-[var(--color-primary)] transition-colors group">
+            <div class="flex items-center space-x-3">
+              <Linkedin class="w-6 h-6 text-[var(--color-text-muted)] group-hover:text-[#0A66C2] transition-colors" />
+              <span class="font-medium">LinkedIn Profile</span>
+            </div>
+            <span class="text-[var(--color-primary)] group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+
+          <a href="/resume.pdf" download="Fernando_Sepulveda_Resume.pdf" class="glass p-4 rounded-xl flex items-center justify-between hover:border-[var(--color-primary)] transition-colors group">
+            <div class="flex items-center space-x-3">
+              <Download class="w-6 h-6 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-colors" />
+              <span class="font-medium">Download Resume (PDF)</span>
+            </div>
+            <span class="text-[var(--color-primary)] group-hover:translate-y-1 transition-transform">↓</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resume Preview -->
+    <div class="mt-16 space-y-6 stagger-2">
+      <h2 class="text-2xl font-bold mb-4 border-b border-white/10 pb-2">Resume Preview</h2>
+      <div class="glass p-2 md:p-4 rounded-3xl border border-white/10 shadow-2xl h-[600px] md:h-[800px] flex items-center justify-center bg-black/20">
+        <object data="/resume.pdf" type="application/pdf" class="w-full h-full rounded-2xl">
+          <div class="flex flex-col items-center justify-center text-center p-8">
+            <p class="text-[var(--color-text-muted)] mb-4">It appears your web browser doesn't support inline PDFs.</p>
+            <a href="/resume.pdf" download="Fernando_Sepulveda_Resume.pdf" class="px-6 py-3 glass rounded-full text-white hover:bg-[var(--color-primary)]/20 transition-colors">
+              Download the PDF instead
+            </a>
+          </div>
+        </object>
+      </div>
+    </div>
+  </div>
+</Layout>

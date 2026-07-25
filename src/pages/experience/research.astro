@@ -1,0 +1,509 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import MSTLogo from "../../assets/MST.png";
+import LFPMe from "../../assets/LFP&me.jpg";
+import UTEPLogo from "../../assets/UTEP.png";
+import SAMSLabImage from "../../assets/SAMSLabAIImage.png";
+import ResearchPosterPreview from "../../assets/ResearchPosterPreview.jpg";
+import ArmyCorpsLogo from "../../assets/United_States_Army_Corps_of_Engineers_logo.svg.webp";
+import { Microscope, Car, FileText, Download, Cpu } from "lucide-astro";
+import Printer3DIcon from "../../components/Printer3DIcon.astro";
+---
+
+<Layout
+  title="Research | Fernando Sepulveda"
+  description="Academic research in AI and Additive Manufacturing."
+>
+  <div class="max-w-5xl mx-auto mt-10 animate-fade-in-up">
+    <div class="mb-12 flex items-center space-x-4">
+      <div class="p-4 rounded-2xl glass bg-[var(--color-accent)]/10">
+        <Microscope class="w-12 h-12 text-[var(--color-accent)]" />
+      </div>
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+          Academic <span class="text-gradient">Research</span>
+        </h1>
+        <p class="text-xl text-[var(--color-text-muted)] mt-2">
+          Exploring autonomous systems and advanced manufacturing.
+        </p>
+      </div>
+    </div>
+
+    <div class="space-y-8">
+      <!-- ERDC AI Research Intern -->
+      <div
+        class="glass p-8 md:p-10 rounded-3xl relative overflow-hidden group border border-white/5 hover:border-[var(--color-primary)]/30 transition-colors"
+      >
+        <div
+          class="absolute -right-10 -bottom-10 opacity-5 group-hover:opacity-10 transition-opacity"
+        >
+          <Cpu class="w-64 h-64 text-white" />
+        </div>
+
+        <div class="relative z-10">
+          <div
+            class="inline-flex items-center px-3 py-1 rounded-full glass bg-[var(--color-primary)]/20 text-[var(--color-primary)] text-sm font-semibold mb-6"
+          >
+            <Cpu class="w-4 h-4 mr-2" />
+            AI Research Intern
+          </div>
+
+          <div class="mb-6 flex items-center space-x-6">
+            <div
+              class="rounded-2xl overflow-hidden border border-white/10 w-24 h-24 flex-shrink-0 bg-white flex items-center justify-center p-2 shadow-lg"
+            >
+              <Image
+                src={ArmyCorpsLogo}
+                alt="US Army Corps of Engineers Logo"
+                width={160}
+                class="w-full h-auto object-contain"
+              />
+            </div>
+            <div>
+              <h2 class="text-3xl font-bold text-white mb-2">
+                Geospatial Research Laboratory
+              </h2>
+              <h3 class="text-xl text-[var(--color-text-muted)]">
+                U.S. Army Engineer Research &amp; Development Center (ERDC) |
+                Arlington, VA
+              </h3>
+            </div>
+          </div>
+
+          <div
+            class="space-y-4 text-[var(--color-text-muted)] text-lg leading-relaxed"
+          >
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="mr-3 text-[var(--color-primary)]">•</span>
+                <span
+                  >Designed and evaluated 5 distinct computer vision
+                  architectures—ranging from algorithmic edge density to deep
+                  learning foundation models—to successfully extract and
+                  validate structural terrain bottlenecks from high-resolution
+                  RGB satellite imagery.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <span class="mr-3 text-[var(--color-primary)]">•</span>
+                <span
+                  >Engineered a zero-shot geospatial segmentation workflow
+                  utilizing PyTorch and Ultralytics FastSAM, integrating K-Means
+                  clustering to dynamically classify semantic materials and
+                  drastically reduce false-positive obstacle detections.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <span class="mr-3 text-[var(--color-primary)]">•</span>
+                <span
+                  >Deployed containerized autonomous navigation systems
+                  utilizing Docker and ROS (Robot Operating System), integrating
+                  real-time LiDAR sensor arrays with a mobile driving robot to
+                  dynamically map and route through complex physical
+                  environments.</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-8 border-t border-white/10">
+            <h4 class="text-white font-semibold mb-4">GRL Poster</h4>
+
+            <div
+              class="glass p-2 md:p-4 rounded-3xl border border-white/10 shadow-2xl h-[400px] md:h-[600px] flex items-center justify-center bg-black/20 mb-6"
+            >
+              <object
+                data="/GRL%20Poster%20Fernando%20Sepulveda%207_10_26-%20DoW%20HBCUMI%20SRIP%20Intern%20Symposium.pdf"
+                type="application/pdf"
+                class="w-full h-full rounded-2xl"
+              >
+                <div
+                  class="flex flex-col items-center justify-center text-center p-8"
+                >
+                  <p class="text-[var(--color-text-muted)] mb-4">
+                    It appears your web browser doesn't support inline PDFs.
+                  </p>
+                  <a
+                    href="/GRL%20Poster%20Fernando%20Sepulveda%207_10_26-%20DoW%20HBCUMI%20SRIP%20Intern%20Symposium.pdf"
+                    download="GRL Poster Fernando Sepulveda.pdf"
+                    class="px-6 py-3 glass rounded-full text-white hover:bg-[var(--color-primary)]/20 transition-colors"
+                  >
+                    Download the PDF instead
+                  </a>
+                </div>
+              </object>
+            </div>
+
+            <p
+              class="text-[var(--color-text-muted)] flex flex-col sm:flex-row sm:items-center sm:justify-between"
+            >
+              <span>HBCU/MI SRIP Intern Symposium Presentation.</span>
+              <a
+                href="/GRL%20Poster%20Fernando%20Sepulveda%207_10_26-%20DoW%20HBCUMI%20SRIP%20Intern%20Symposium.pdf"
+                class="mt-4 sm:mt-0 inline-flex items-center px-4 py-2 glass rounded-lg text-[var(--color-primary)] hover:text-white hover:bg-[var(--color-primary)]/20 transition-colors border border-[var(--color-primary)]/30"
+              >
+                <Download class="w-4 h-4 mr-2" />
+                Download Poster PDF
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Machine Learning Research Project -->
+      <div
+        class="glass p-8 md:p-10 rounded-3xl relative overflow-hidden group border border-white/5 hover:border-[var(--color-primary)]/30 transition-colors"
+      >
+        <div
+          class="absolute -right-10 -bottom-10 opacity-5 group-hover:opacity-10 transition-opacity"
+        >
+          <Cpu class="w-64 h-64 text-white" />
+        </div>
+
+        <div class="relative z-10">
+          <div
+            class="inline-flex items-center px-3 py-1 rounded-full glass bg-[var(--color-primary)]/20 text-[var(--color-primary)] text-sm font-semibold mb-6"
+          >
+            <Cpu class="w-4 h-4 mr-2" />
+            AI Graduate Researcher
+          </div>
+
+          <h2 class="text-3xl font-bold text-white mb-2">
+            Machine Learning Research Project
+          </h2>
+          <h3 class="text-xl text-[var(--color-text-muted)] mb-6">
+            The University of Texas at El Paso (UTEP)
+          </h3>
+
+          <div
+            class="space-y-4 text-[var(--color-text-muted)] text-lg leading-relaxed"
+          >
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="mr-3 text-[var(--color-primary)]">•</span>
+                <span
+                  >Implemented PyTorch-based CNN architecture for facial
+                  recognition with adversarial attack resistance, achieving 92%
+                  accuracy on benchmark datasets.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <span class="mr-3 text-[var(--color-primary)]">•</span>
+                <span
+                  >Developed custom data augmentation pipeline and feature
+                  extraction techniques to enhance model resilience against
+                  security vulnerabilities, training across 10,000+ samples.</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-8 border-t border-white/10">
+            <h4 class="text-white font-semibold mb-4">
+              Project Presentation Slides
+            </h4>
+
+            <div
+              class="glass p-2 md:p-4 rounded-3xl border border-white/10 shadow-2xl h-[400px] md:h-[600px] flex items-center justify-center bg-black/20 mb-6"
+            >
+              <object
+                data="/ML%20Project%20Spring%202024_Slides.pdf"
+                type="application/pdf"
+                class="w-full h-full rounded-2xl"
+              >
+                <div
+                  class="flex flex-col items-center justify-center text-center p-8"
+                >
+                  <p class="text-[var(--color-text-muted)] mb-4">
+                    It appears your web browser doesn't support inline PDFs.
+                  </p>
+                  <a
+                    href="/ML%20Project%20Spring%202024_Slides.pdf"
+                    download="ML Project Spring 2024_Slides.pdf"
+                    class="px-6 py-3 glass rounded-full text-white hover:bg-[var(--color-primary)]/20 transition-colors"
+                  >
+                    Download the PDF instead
+                  </a>
+                </div>
+              </object>
+            </div>
+
+            <p
+              class="text-[var(--color-text-muted)] flex flex-col sm:flex-row sm:items-center sm:justify-between"
+            >
+              <span
+                >Overview of CNN architecture and adversarial resistance.</span
+              >
+              <a
+                href="/ML%20Project%20Spring%202024_Slides.pdf"
+                class="mt-4 sm:mt-0 inline-flex items-center px-4 py-2 glass rounded-lg text-[var(--color-primary)] hover:text-white hover:bg-[var(--color-primary)]/20 transition-colors border border-[var(--color-primary)]/30"
+              >
+                <Download class="w-4 h-4 mr-2" />
+                Download Slides PDF
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAMS Lab Research -->
+      <div
+        class="glass p-8 md:p-10 rounded-3xl relative overflow-hidden group border border-white/5 hover:border-[var(--color-accent)]/30 transition-colors stagger-1"
+      >
+        <!-- Background Icon -->
+        <div
+          class="absolute -right-10 -bottom-10 opacity-5 group-hover:opacity-10 transition-opacity"
+        >
+          <Car class="w-64 h-64 text-white" />
+        </div>
+
+        <div class="relative z-10">
+          <div
+            class="inline-flex items-center px-3 py-1 rounded-full glass bg-[var(--color-accent)]/20 text-[var(--color-accent)] text-sm font-semibold mb-6"
+          >
+            <FileText class="w-4 h-4 mr-2" />
+            Published Paper
+          </div>
+
+          <div class="mb-6 flex items-center space-x-6">
+            <div
+              class="rounded-2xl overflow-hidden border border-white/10 w-24 h-24 flex-shrink-0 bg-white flex items-center justify-center p-2 shadow-lg"
+            >
+              <Image
+                src={UTEPLogo}
+                alt="UTEP Logo"
+                width={160}
+                class="w-full h-auto object-contain"
+              />
+            </div>
+            <div>
+              <h2 class="text-3xl font-bold text-white mb-2">
+                Smart Autonomous Mobility Systems (SAMS) Lab
+              </h2>
+              <h3 class="text-xl text-[var(--color-text-muted)]">
+                IEEE Flagship Autonomous Vehicle Conference, ITSC 2024
+              </h3>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row md:items-center gap-8">
+            <div
+              class="space-y-4 text-[var(--color-text-muted)] text-lg leading-relaxed md:w-2/3"
+            >
+              <div
+                class="p-6 rounded-2xl bg-white/5 border-l-4 border-[var(--color-accent)]"
+              >
+                <ul class="space-y-3 text-lg text-[var(--color-text-main)]">
+                  <li class="flex items-start">
+                    <span class="mr-3 text-[var(--color-accent)] mt-1">•</span>
+                    <span
+                      >Published conference paper on security of Adaptive Cruise
+                      Control systems.</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="mr-3 text-[var(--color-accent)] mt-1">•</span>
+                    <span
+                      >Developed data visualization tools using Python
+                      (matplotlib, pandas) to simulate and analyze complex
+                      vehicle platoon dynamics using Intelligent Driver Models.</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="mr-3 text-[var(--color-accent)] mt-1">•</span>
+                    <span
+                      >Applied optimization techniques (CPLEX, MATLAB) to
+                      enhance vehicle performance, efficiency, and safety.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="md:w-1/3 rounded-2xl overflow-hidden border border-white/10 glass bg-black/20 flex items-center justify-center p-2"
+            >
+              <Image
+                src={SAMSLabImage}
+                alt="SAMS Lab AI Image"
+                width={600}
+                class="w-full h-auto object-contain hover:scale-105 transition-transform duration-700 rounded-xl"
+              />
+            </div>
+          </div>
+
+          <div class="mt-8 pt-8 border-t border-white/10">
+            <h4 class="text-white font-semibold mb-4">
+              Conference Paper (ITSC 2024)
+            </h4>
+
+            <div
+              class="glass p-2 md:p-4 rounded-3xl border border-white/10 shadow-2xl h-[400px] md:h-[600px] flex items-center justify-center bg-black/20 mb-6"
+            >
+              <object
+                data="/ITSC2024_Paper.pdf"
+                type="application/pdf"
+                class="w-full h-full rounded-2xl"
+              >
+                <div
+                  class="flex flex-col items-center justify-center text-center p-8"
+                >
+                  <p class="text-[var(--color-text-muted)] mb-4">
+                    It appears your web browser doesn't support inline PDFs.
+                  </p>
+                  <a
+                    href="/ITSC2024_Paper.pdf"
+                    download="ITSC2024_Paper.pdf"
+                    class="px-6 py-3 glass rounded-full text-white hover:bg-[var(--color-primary)]/20 transition-colors"
+                  >
+                    Download the PDF instead
+                  </a>
+                </div>
+              </object>
+            </div>
+
+            <p
+              class="text-[var(--color-text-muted)] flex flex-col sm:flex-row sm:items-center sm:justify-between"
+            >
+              <span>Impact evaluation of cyberattacks on AVs.</span>
+              <a
+                href="/ITSC2024_Paper.pdf"
+                class="mt-4 sm:mt-0 inline-flex items-center px-4 py-2 glass rounded-lg text-[var(--color-accent)] hover:text-white hover:bg-[var(--color-accent)]/20 transition-colors border border-[var(--color-accent)]/30"
+              >
+                <Download class="w-4 h-4 mr-2" />
+                Download Paper PDF
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additive Manufacturing -->
+      <div
+        class="glass p-8 md:p-10 rounded-3xl relative overflow-hidden group border border-white/5 hover:border-[var(--color-secondary)]/30 transition-colors stagger-1"
+      >
+        <!-- Background Icon -->
+        <div
+          class="absolute -right-10 -bottom-10 opacity-5 group-hover:opacity-10 transition-opacity"
+        >
+          <Printer3DIcon class="w-64 h-64 text-white" />
+        </div>
+
+        <div class="relative z-10">
+          <div
+            class="inline-flex items-center px-3 py-1 rounded-full glass bg-[var(--color-secondary)]/20 text-[var(--color-secondary)] text-sm font-semibold mb-6"
+          >
+            <Microscope class="w-4 h-4 mr-2" />
+            Undergraduate Summer Research Assistant
+          </div>
+
+          <div class="mb-6 flex items-center space-x-6">
+            <div
+              class="rounded-2xl overflow-hidden border border-white/10 glass w-24 h-24 flex-shrink-0 bg-white/5 flex items-center justify-center p-2"
+            >
+              <Image
+                src={MSTLogo}
+                alt="MST Logo"
+                width={160}
+                class="w-full h-auto object-contain"
+              />
+            </div>
+            <div>
+              <h2 class="text-3xl font-bold text-white mb-2">
+                Additive Manufacturing Research
+              </h2>
+              <h3 class="text-xl text-[var(--color-text-muted)]">
+                Missouri University of Science and Technology (MST)
+              </h3>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row md:items-center gap-8">
+            <div
+              class="space-y-4 text-[var(--color-text-muted)] text-lg leading-relaxed md:w-2/3"
+            >
+              <p class="text-white font-medium">
+                As an Undergraduate Summer Research Assistant in the Department
+                of Mechanical and Aerospace Engineering, I investigated advanced
+                materials processing using the novel Laser Foil Printing (LFP)
+                technique.
+              </p>
+              <ul class="space-y-4 mt-4">
+                <li class="flex items-start">
+                  <span class="mr-3 text-[var(--color-secondary)] mt-1">•</span>
+                  <span
+                    ><strong>Active Cooling System:</strong> Developed and implemented
+                    a rapid cooling solution using Liquid Nitrogen (LIN) to achieve
+                    cooling rates of 500 – 3000 K/s, enabling the formation of amorphous
+                    structures (metallic glass).</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-3 text-[var(--color-secondary)] mt-1">•</span>
+                  <span
+                    ><strong>Process Optimization:</strong> Engineered a combination
+                    of strategic printing pauses and LIN dispersion to rapidly cool
+                    metal foil layers without disrupting the dual-laser (CW IR & UV
+                    pulsed) welding process.</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-3 text-[var(--color-secondary)] mt-1">•</span>
+                  <span
+                    ><strong>Material Analysis:</strong> Established effective testing
+                    methodologies to analyze 304L stainless steel samples through
+                    electron microscopy and thermocouple temperature readings, successfully
+                    demonstrating proof-of-concept for the system.</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <div
+              class="md:w-1/3 rounded-2xl overflow-hidden border border-white/10 glass bg-black/20 flex items-center justify-center p-2"
+            >
+              <Image
+                src={LFPMe}
+                alt="Laser Foil Printing Research"
+                width={600}
+                class="w-full h-auto object-contain hover:scale-105 transition-transform duration-700 rounded-xl"
+              />
+            </div>
+          </div>
+
+          <div class="mt-8 pt-8 border-t border-white/10">
+            <h4 class="text-white font-semibold mb-2">
+              Symposium Presentation
+            </h4>
+
+            <div
+              class="my-6 rounded-2xl overflow-hidden border border-white/10 glass bg-white/5 flex items-center justify-center p-2"
+            >
+              <Image
+                src={ResearchPosterPreview}
+                alt="Research Poster Preview"
+                width={1200}
+                class="w-full h-auto object-contain drop-shadow-xl hover:scale-[1.02] transition-transform duration-500 rounded-xl"
+              />
+            </div>
+
+            <p
+              class="text-[var(--color-text-muted)] flex flex-col sm:flex-row sm:items-center sm:justify-between"
+            >
+              <span
+                >Presented a research poster at the 2022 International Solid
+                Freeform Fabrication Symposium in Austin, TX.</span
+              >
+              <a
+                href="/S&T%20LFP%20Research%20Poster%20(H42xW52.5).pptx"
+                class="mt-4 sm:mt-0 inline-flex items-center px-4 py-2 glass rounded-lg text-[var(--color-secondary)] hover:text-white hover:bg-[var(--color-secondary)]/20 transition-colors border border-[var(--color-secondary)]/30"
+              >
+                <Download class="w-4 h-4 mr-2" />
+                Download Poster PPTX
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,344 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import OracleImg from "../../assets/Oracle.jpg";
+import KansasCityImg from "../../assets/KansasCity.jpg";
+import Keck1Img from "../../assets/Keck1.jpg";
+import Keck2Img from "../../assets/Keck2.jpg";
+
+import MLCICLogo from "../../assets/24_02_MikeLoyaCenter_FullColor_Logo.png";
+import OracleLogo from "../../assets/Oracle-Logo-1.png";
+import HoneywellLogo from "../../assets/kcnsc_logo.png";
+import KeckLogo from "../../assets/wmkecklogo.jpg";
+
+import MLCICPic from "../../assets/MLCIC_Pic.jpg";
+
+import {
+  Briefcase,
+  Cloud,
+  Shield,
+  Database,
+  ExternalLink,
+  Download,
+} from "lucide-astro";
+
+const workHighlights = [
+  {
+    company: "Mike Loya Center for Innovation and Commerce",
+    role: "AI Graduate Research Fellow",
+    icon: Briefcase,
+    color: "var(--color-accent)",
+    link: "https://www.utep.edu/business/cbae/programs/mike-loya-center.html",
+    logo: MLCICLogo,
+    presentation: "/MLCIC_AAIIPosterSpring2026.pdf#view=Fit",
+    presentationTitle: "AI Research Poster",
+    presentationDesc: "Poster detailing AI-driven business models.",
+    sideImage: {
+      src: MLCICPic,
+      imageClass: "w-full h-48 md:h-80 object-cover object-center",
+    },
+    points: [
+      "Mentor student entrepreneurs in the development and commercialization of AI-driven business models, facilitating the transition of graduate-level research into market-ready prototypes.",
+      "Evaluate the technical feasibility and scalability of AI startups, providing strategic guidance on software architecture and algorithmic efficiency to optimize product-market fit.",
+    ],
+  },
+  {
+    company: "Oracle Cloud Infrastructure (OCI)",
+    role: "Software Engineer / Cloud Infrastructure",
+    icon: Cloud,
+    color: "var(--color-primary)",
+    link: "https://www.oracle.com/corporate/",
+    logo: OracleLogo,
+    presentation: "/OracleSlides.pdf#view=Fit",
+    presentationTitle: "Internship Presentation",
+    presentationDesc: "Presentation on hypervisor management automation.",
+    sideImage: {
+      src: OracleImg,
+      imageClass: "w-full h-48 md:h-80 object-cover object-center",
+    },
+    points: [
+      "Designed SQL scripts in Java to automate hypervisor management and testing, enabling region-specific organization for hosts based on technical requirements.",
+      "Built reusable façade class integrating RESTful APIs for seamless data transfer between front/back-end systems.",
+      "Reduced deployment time by 50% through comprehensive documentation of command-line interfaces.",
+    ],
+  },
+  {
+    company: "Honeywell (Kansas City National Security Campus)",
+    role: "Software Developer",
+    icon: Shield,
+    color: "var(--color-accent)",
+    link: "https://supplier.kcnsc.doe.gov/ptl/about-kcnsc",
+    logo: HoneywellLogo,
+    presentation: "/KCNSCSlides.pdf#view=Fit",
+    presentationTitle: "KCNSC Work Presentation",
+    presentationDesc:
+      "Overview of data-driven factory automation and semantic search systems.",
+    sideImage: {
+      src: KansasCityImg,
+      imageClass: "w-full h-48 md:h-64 object-cover object-[50%_60%]",
+    },
+    points: [
+      "Successfully implemented sophisticated data-driven factory automation processes using POLCA methodology leveraging Dataiku, Hadoop, and Python programming, projected to yield a minimum of $250,000 in savings.",
+      "Engineered a robust security-first semantic search system employing advanced Large Language Models such as BERT and Sentence-BERT, ensuring highly secure data management.",
+    ],
+  },
+  {
+    company: "W. M. Keck Center for 3D Innovation",
+    role: "Undergraduate Research Assistant",
+    icon: Database,
+    color: "var(--color-secondary)",
+    link: "https://www.utep.edu/keck/people/students.html",
+    logo: KeckLogo,
+    presentation: "/KeckSlides.pdf#view=Fit",
+    presentationTitle: "Research Presentation",
+    presentationDesc:
+      "Details on cloud-based database systems and quantitative analysis on 3D printed artifacts.",
+    images: [
+      {
+        // Portrait (Left): Now maintains a vertical style, much less cropping
+        src: Keck1Img,
+        imageClass: "h-full w-auto object-cover",
+        containerClass:
+          "h-64 md:h-80 w-fit mx-auto rounded-2xl overflow-hidden border border-white/10 glass bg-black/20",
+      },
+      {
+        // Horizontal (Right): Remains uncropped and hugs the image
+        src: Keck2Img,
+        imageClass: "h-full w-auto object-cover",
+        containerClass:
+          "h-64 md:h-80 w-fit mx-auto rounded-2xl overflow-hidden border border-white/10 glass bg-black/20",
+      },
+    ],
+    points: [
+      "Developed and maintained a cloud-based database system as a python built webapp using Flask with PyCharm for cloud-based data management system Hyperthought",
+      "Examined and documented the quality of SLM artifacts by conducting porosity and nominal-to-actual analyses using XCT Machine with VG Studio Software resulting in consistent print grade improvements",
+      "Built a connection between Mechanical Engineering and Computer Science teams by identifying weaknesses between the data collection process resulting in a more consistent development process",
+    ],
+  },
+];
+
+const additionalPositions = [
+  "Lifeguarding / Private Swim Lessons",
+  "Sodexo",
+  "Polo Ralph Lauren",
+  "Subway",
+  "TAB : Teen Advisory Board; 2018 - 2019",
+];
+---
+
+<Layout
+  title="Leadership & Work | Fernando Sepulveda"
+  description="Professional work experience and leadership roles."
+>
+  <div class="max-w-5xl mx-auto mt-10 animate-fade-in-up">
+    <div class="mb-12 flex items-center space-x-4">
+      <div class="p-4 rounded-2xl glass bg-[var(--color-secondary)]/10">
+        <Briefcase class="w-12 h-12 text-[var(--color-secondary)]" />
+      </div>
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+          Leadership & <span class="text-gradient">Work</span>
+        </h1>
+        <p class="text-xl text-[var(--color-text-muted)] mt-2">
+          Professional highlights and work experience.
+        </p>
+      </div>
+    </div>
+
+    <div class="space-y-12">
+      <!-- Highlights Section -->
+      <div>
+        <h2
+          class="text-2xl font-bold mb-6 text-white uppercase tracking-wider text-sm border-b border-white/10 pb-2"
+        >
+          Career Highlights
+        </h2>
+        <div class="space-y-10">
+          {
+            workHighlights.map((work, index) => {
+              const Icon = work.icon;
+              const delayClass = `stagger-${index + 1}`;
+              return (
+                <div
+                  class={`glass p-8 md:p-10 rounded-3xl relative overflow-hidden group border border-white/5 hover:border-[${work.color}]/50 transition-colors ${delayClass}`}
+                >
+                  <div
+                    class="absolute top-0 left-0 w-1 h-full"
+                    style={`background-color: ${work.color}`}
+                  />
+
+                  <div class="relative z-10">
+                    <div class="mb-6 flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+                      <div class="rounded-2xl overflow-hidden border border-white/10 w-24 h-24 flex-shrink-0 bg-white flex items-center justify-center p-2 shadow-lg">
+                        <Image
+                          src={work.logo}
+                          alt={`${work.company} Logo`}
+                          width={160}
+                          class="w-full h-auto object-contain"
+                        />
+                      </div>
+                      <div>
+                        <h2 class="text-3xl font-bold text-white mb-2 flex flex-wrap items-center gap-2">
+                          {work.company}
+                          <a
+                            href={work.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-[var(--color-text-muted)] hover:text-white transition-colors"
+                          >
+                            <ExternalLink class="w-5 h-5" />
+                          </a>
+                        </h2>
+                        <h3
+                          class="text-xl font-medium"
+                          style={`color: ${work.color}`}
+                        >
+                          {work.role}
+                        </h3>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row md:items-center gap-8 mt-6">
+                      <div
+                        class={`space-y-4 text-[var(--color-text-muted)] text-lg leading-relaxed ${work.sideImage ? "md:w-1/2" : "w-full"}`}
+                      >
+                        <ul class="space-y-3">
+                          {work.points.map((point) => (
+                            <li class="flex items-start">
+                              <span
+                                class="mr-3 mt-1"
+                                style={`color: ${work.color}`}
+                              >
+                                •
+                              </span>
+                              <span>{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      {work.sideImage && (
+                        <div class="md:w-1/2 flex flex-col sm:flex-row gap-4 h-full">
+                          {Array.isArray(work.sideImage) ? (
+                            work.sideImage.map((img) => (
+                              <div
+                                class={
+                                  img.containerClass ||
+                                  "flex-1 rounded-2xl overflow-hidden border border-white/10 glass bg-black/20 flex items-center justify-center p-2"
+                                }
+                              >
+                                <Image
+                                  src={img.src || img}
+                                  alt={`${work.company} photo`}
+                                  width={600}
+                                  class={`${img.imageClass || "w-full h-64 object-cover"} hover:scale-105 transition-transform duration-700 rounded-xl`}
+                                />
+                              </div>
+                            ))
+                          ) : (
+                            <div
+                              class={
+                                work.sideImage.containerClass ||
+                                "w-full rounded-2xl overflow-hidden border border-white/10 glass bg-black/20 flex items-center justify-center p-2"
+                              }
+                            >
+                              <Image
+                                src={work.sideImage.src || work.sideImage}
+                                alt={`${work.company} Contextual Picture`}
+                                width={800}
+                                class={`${work.sideImage.imageClass || "w-full h-auto object-contain"} hover:scale-105 transition-transform duration-700 rounded-xl`}
+                              />
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+
+                    {work.images && work.images.length > 0 && (
+                      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {work.images.map((img) => (
+                          <div
+                            class={
+                              img.containerClass ||
+                              "rounded-2xl overflow-hidden border border-white/10 glass bg-black/20 flex items-center justify-center p-2"
+                            }
+                          >
+                            <Image
+                              src={img.src || img}
+                              alt={`${work.company} photo`}
+                              width={800}
+                              class={`${img.imageClass || "w-full h-auto object-contain"} hover:scale-105 transition-transform duration-700 rounded-xl`}
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {work.presentation && (
+                      <div class="mt-12 pt-8 border-t border-white/10">
+                        <h4 class="text-white font-semibold mb-4">
+                          {work.presentationTitle}
+                        </h4>
+
+                        <div class="glass p-2 md:p-4 rounded-3xl border border-white/10 shadow-2xl h-[400px] md:h-[800px] flex items-center justify-center bg-black/20 mb-6">
+                          <object
+                            data={work.presentation}
+                            type="application/pdf"
+                            class="w-full h-full rounded-2xl"
+                          >
+                            <div class="flex flex-col items-center justify-center text-center p-8">
+                              <p class="text-[var(--color-text-muted)] mb-4">
+                                It appears your web browser doesn't support
+                                inline PDFs.
+                              </p>
+                              <a
+                                href={work.presentation}
+                                download
+                                class="px-6 py-3 glass rounded-full text-white hover:bg-[var(--color-primary)]/20 transition-colors border border-white/20"
+                              >
+                                Download the PDF instead
+                              </a>
+                            </div>
+                          </object>
+                        </div>
+
+                        <p class="text-[var(--color-text-muted)] flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                          <span>{work.presentationDesc}</span>
+                          <a
+                            href={work.presentation}
+                            download
+                            class="mt-4 sm:mt-0 inline-flex items-center px-4 py-2 glass rounded-lg text-white hover:bg-white/10 transition-colors border border-white/20"
+                          >
+                            <Download class="w-4 h-4 mr-2" />
+                            Download PDF
+                          </a>
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })
+          }
+        </div>
+      </div>
+
+      <!-- Additional Positions -->
+      <div class="stagger-4">
+        <h2
+          class="text-2xl font-bold mb-6 text-white uppercase tracking-wider text-sm border-b border-white/10 pb-2"
+        >
+          Additional Positions Held
+        </h2>
+        <div class="flex flex-wrap gap-3">
+          {
+            additionalPositions.map((pos) => (
+              <span class="px-4 py-2 glass rounded-full text-[var(--color-text-muted)] hover:text-white transition-colors cursor-default border border-white/5 hover:border-white/20">
+                {pos}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
