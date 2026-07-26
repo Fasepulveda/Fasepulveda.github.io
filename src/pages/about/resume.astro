@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
-import { Mail, Phone, Github, Linkedin, Download } from 'lucide-astro';
+import { Github, Linkedin, Download } from 'lucide-astro';
 ---
 
 <Layout title="Resume | Fernando Sepulveda" description="Contact info and professional details for Fernando Sepulveda.">
@@ -11,41 +11,10 @@ import { Mail, Phone, Github, Linkedin, Download } from 'lucide-astro';
       <p class="text-xl text-[var(--color-text-muted)]">My contact information and online presence.</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Contact Info -->
-      <div class="space-y-6">
-        <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
-        
-        <div class="glass p-6 rounded-2xl space-y-4">
-          <div class="flex items-center space-x-4">
-            <div class="p-3 rounded-full bg-[var(--color-secondary)]/10 text-[var(--color-secondary)]">
-              <Mail class="w-6 h-6" />
-            </div>
-            <div>
-              <p class="text-sm text-[var(--color-text-muted)]">Email</p>
-              <a href="mailto:fasepulveda@miners.utep.edu" class="text-lg font-medium hover:text-[var(--color-primary)] transition-colors">
-                fasepulveda@miners.utep.edu
-              </a>
-            </div>
-          </div>
-
-          <div class="flex items-center space-x-4">
-            <div class="p-3 rounded-full bg-[var(--color-secondary)]/10 text-[var(--color-secondary)]">
-              <Phone class="w-6 h-6" />
-            </div>
-            <div>
-              <p class="text-sm text-[var(--color-text-muted)]">Phone</p>
-              <a href="tel:9153526547" class="text-lg font-medium hover:text-[var(--color-primary)] transition-colors">
-                (915) 352-6547
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <div class="flex flex-col items-center justify-center max-w-2xl mx-auto gap-8">
       <!-- Links & Resume -->
-      <div class="space-y-6 stagger-1">
-        <h2 class="text-2xl font-bold mb-4">Connect & Download</h2>
+      <div class="space-y-6 stagger-1 w-full">
+        <h2 class="text-2xl font-bold mb-4 text-center">Connect & Download</h2>
         
         <div class="grid grid-cols-1 gap-4">
           <a href="https://github.com/Fasepulveda" target="_blank" rel="noopener noreferrer" class="glass p-4 rounded-xl flex items-center justify-between hover:border-[var(--color-primary)] transition-colors group">
